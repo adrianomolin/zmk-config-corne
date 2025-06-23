@@ -254,7 +254,7 @@
 
             bindings = <
 &kp LG(GRAVE)  &kp EXCL   &kp AT     &kp HASH      &kp DLLR       &kp PRCNT    &kp CARET       &kp AMPS           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE    &kp BACKSPACE
-&kp LG(V)      &trans     &kp MINUS  &kp PLUS      &kp EQUAL      &kp HASH     &kp UNDERSCORE  &kp COLON          &kp LEFT_BRACE        &kp RBKT               &kp SLASH    &kp DOT
+&kp LG(V)      &trans     &kp MINUS  &kp PLUS      &kp EQUAL      &kp HASH     &kp UNDERSCORE  &kp COLON          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH    &kp DOT
 &kp LG(C)      &kp LG(X)  &trans     &kp ASTERISK  &kp BACKSLASH  &kp PIPE     &kp TILDE       &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN  &trans
                                      &kp LEFT_ALT  &kp ESC        &kp ENTER    &kp SPACE       &mo 1              &kp LEFT_GUI
             >;
