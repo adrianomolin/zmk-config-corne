@@ -318,5 +318,10 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
+
+        win_sys {
+            if-layers = <6 7>;
+            then-layer = <3>;
+        };
     };
 };
