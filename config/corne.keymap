@@ -209,7 +209,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        mac_base {
             display-name = "main";
 
             // -----------------------------------------------------------------------------------------
@@ -226,7 +226,7 @@
             >;
         };
 
-        lower_layer {
+        mac_num {
             display-name = "num";
 
             // -----------------------------------------------------------------------------------------
@@ -238,12 +238,12 @@
             bindings = <
 &kp TAB           &kp N1  &kp N2            &kp N3        &kp N4       &kp N5           &kp N6     &kp N7          &kp N8        &kp N9           &kp N0  &kp BACKSPACE
 &kp LEFT_CONTROL  &trans  &trans            &trans        &browsertab  &kp PAGE_UP      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans            &trans  &sk LS(LEFT_ALT)  &trans        &trans       &kp PAGE_DOWN    &trans     &trans          &trans        &trans           &trans  &trans
+&trans            &trans  &sk LS(LEFT_ALT)  &trans        &trans       &kp PAGE_DOWN    &trans     &trans          &trans        &trans           &trans  &tog 5
                                             &kp LEFT_ALT  &mo 2        &kp ENTER        &kp SPACE  &trans          &kp LEFT_GUI
             >;
         };
 
-        raise_layer {
+        mac_symbols {
             display-name = "symbols";
 
             // -----------------------------------------------------------------------------------------
@@ -260,10 +260,10 @@
             >;
         };
 
-        adjust_layer {
+        system {
             display-name = "system";
             bindings = <
-&tog 5  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7             &kp F8      &kp F9           &kp F10      &trans
+&tog 0  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7             &kp F8      &kp F9           &kp F10      &trans
 &trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans       &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &kp C_PREV         &kp C_PP    &kp C_NEXT       &bootloader  &trans
                                     &trans        &trans      &trans            &trans  &trans             &trans
@@ -280,12 +280,33 @@
             >;
         };
 
-        layer_5 {
+        windows_base {
+            display-name = "main";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp LGUI   &kp A  &kp S  &kp D     &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp RSHFT  &kp Z  &kp X  &kp C     &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                         &kp LALT  &trans  &trans    &trans  &trans  &kp LCTRL
+&kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T      &kp Y      &kp U      &kp I             &kp O    &kp P     &kp BACKSPACE
+&kp LGUI            &kp A  &kp S  &kp D         &kp F  &kp G      &kp H      &kp J      &kp K             &kp L    &kp SEMI  &kp SQT
+&lht LSHIFT LSHIFT  &kp Z  &kp X  &kp C         &kp V  &kp B      &kp N      &kp M      &kp COMMA         &kp DOT  &kp FSLH  &lm_one_hyper
+                                  &kp LEFT_ALT  &mo 7  &kp RET    &kp SPACE  &lt 6 ESC  &kp LEFT_CONTROL
+            >;
+        };
+
+        windows_num {
+            display-name = "num";
+            bindings = <
+&kp TAB   &kp N1  &kp N2            &kp N3        &kp N4       &kp N5           &kp N6     &kp N7          &kp N8        &kp N9           &kp N0  &kp BACKSPACE
+&kp LGUI  &trans  &trans            &trans        &browsertab  &kp PAGE_UP      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans    &trans  &sk LS(LEFT_ALT)  &trans        &trans       &kp PAGE_DOWN    &trans     &trans          &trans        &trans           &trans  &tog 0
+                                    &kp LEFT_ALT  &mo 7        &kp ENTER        &kp SPACE  &trans          &kp LCTRL
+            >;
+        };
+
+        windows_symbols {
+            display-name = "symbols";
+            bindings = <
+&kp LC(GRAVE)  &kp EXCL   &kp AT     &kp HASH      &kp DLLR       &kp PRCNT    &kp CARET       &kp AMPS           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE    &kp BACKSPACE
+&kp LC(V)      &trans     &kp MINUS  &kp PLUS      &kp EQUAL      &kp HASH     &kp UNDERSCORE  &kp COLON          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH    &kp DOT
+&kp LC(C)      &kp LC(X)  &trans     &kp ASTERISK  &kp BACKSLASH  &kp PIPE     &kp TILDE       &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN  &trans
+                                     &kp LEFT_ALT  &kp ESC        &kp ENTER    &kp SPACE       &mo 6              &kp LCTRL
             >;
         };
     };
