@@ -238,7 +238,7 @@
             bindings = <
 &kp TAB           &kp N1  &kp N2            &kp N3        &kp N4       &kp N5           &kp N6     &kp N7          &kp N8        &kp N9           &kp N0  &kp BACKSPACE
 &kp LEFT_CONTROL  &trans  &trans            &trans        &browsertab  &kp PAGE_UP      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans            &trans  &sk LS(LEFT_ALT)  &trans        &trans       &kp PAGE_DOWN    &trans     &trans          &trans        &trans           &trans  &tog 5
+&trans            &trans  &sk LS(LEFT_ALT)  &trans        &trans       &kp PAGE_DOWN    &trans     &trans          &trans        &trans           &trans  &tog 4
                                             &kp LEFT_ALT  &mo 2        &kp ENTER        &kp SPACE  &trans          &kp LEFT_GUI
             >;
         };
@@ -270,23 +270,13 @@
             >;
         };
 
-        EXTRA {
-            display-name = "extra";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         windows_base {
             display-name = "main";
             bindings = <
 &kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T      &kp Y      &kp U      &kp I             &kp O    &kp P     &kp BACKSPACE
 &kp LGUI            &kp A  &kp S  &kp D         &kp F  &kp G      &kp H      &kp J      &kp K             &kp L    &kp SEMI  &kp SQT
 &lht LSHIFT LSHIFT  &kp Z  &kp X  &kp C         &kp V  &kp B      &kp N      &kp M      &kp COMMA         &kp DOT  &kp FSLH  &lm_one_hyper
-                                  &kp LEFT_ALT  &mo 7  &kp RET    &kp SPACE  &lt 6 ESC  &kp LEFT_CONTROL
+                                  &kp LEFT_ALT  &mo 6  &kp RET    &kp SPACE  &lt 5 ESC  &kp LEFT_CONTROL
             >;
         };
 
@@ -296,7 +286,7 @@
 &kp TAB   &kp N1  &kp N2            &kp N3        &kp N4       &kp N5           &kp N6     &kp N7          &kp N8        &kp N9           &kp N0  &kp BACKSPACE
 &kp LGUI  &trans  &trans            &trans        &browsertab  &kp PAGE_UP      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans    &trans  &sk LS(LEFT_ALT)  &trans        &trans       &kp PAGE_DOWN    &trans     &trans          &trans        &trans           &trans  &tog 0
-                                    &kp LEFT_ALT  &mo 7        &kp ENTER        &kp SPACE  &trans          &kp LCTRL
+                                    &kp LEFT_ALT  &mo 6        &kp ENTER        &kp SPACE  &trans          &kp LCTRL
             >;
         };
 
@@ -306,7 +296,7 @@
 &kp LC(GRAVE)  &kp EXCL   &kp AT     &kp HASH      &kp DLLR       &kp PRCNT    &kp CARET       &kp AMPS           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE    &kp BACKSPACE
 &kp LC(V)      &trans     &kp MINUS  &kp PLUS      &kp EQUAL      &kp HASH     &kp UNDERSCORE  &kp COLON          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH    &kp DOT
 &kp LC(C)      &kp LC(X)  &trans     &kp ASTERISK  &kp BACKSLASH  &kp PIPE     &kp TILDE       &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN  &trans
-                                     &kp LEFT_ALT  &kp ESC        &kp ENTER    &kp SPACE       &mo 6              &kp LCTRL
+                                     &kp LEFT_ALT  &kp ESC        &kp ENTER    &kp SPACE       &mo 5              &kp LCTRL
             >;
         };
     };
@@ -320,7 +310,7 @@
         };
 
         win_sys {
-            if-layers = <6 7>;
+            if-layers = <5 6>;
             then-layer = <3>;
         };
     };
